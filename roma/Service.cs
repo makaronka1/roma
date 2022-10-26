@@ -1,11 +1,18 @@
-﻿namespace Service
+﻿using System.Text.Json;
+namespace MainService
 {
+
     public class Service
     {
-        public string getHelloWorld()
+        public string Pidor(object mass)
         {
-            return "Я еблан";
+            return JsonSerializer.Serialize(mass);
+        }
+
+        public string message()
+        {
+            return JsonSerializer.Serialize("error");
         }
     }
-    
+
 }
